@@ -47,19 +47,16 @@
       <header class="card-header">
         <h2 id="portal-title" class="title">Portal Temu Balaesang</h2>
         <p class="subtitle">
-          Enter your code to check.
+          Enter your group name to check.
         </p>
       </header>
       <form id="code-form" class="code-form" novalidate>
         <div class="form-group">
-          <label for="group-code" class="input-label">Group Code</label>
-          <input id="group-code" class="code-input" name="groupCode" type="text" inputmode="numeric" autocomplete="off"
-            spellcheck="false" maxlength="16" placeholder="Enter your group code"
-            aria-describedby="code-hint error-message" />
-
-          <!-- <p id="code-hint" class="hint">Panam.</p> -->
+          <label for="group-code" class="input-label">Group Name</label>
+          <input id="group-code" class="code-input" name="groupCode" type="text" autocomplete="off" spellcheck="false"
+            maxlength="25" placeholder="ex: TEMU BALAESANG" aria-describedby="code-hint error-message" />
+          <p id="error-message" class="error-message" style="color: red; margin-top: 5px; display: none;"></p>
         </div>
-
         <!-- SUBMIT BUTTON -->
         <button type="submit" class="submit-button">Check Status</button>
       </form>

@@ -4,9 +4,10 @@
   ========================================
 */
 const GROUP_RESULTS = Object.freeze({
-    "10293": "passed",
-    "49201": "failed",
-    "": "failed"
+    "GRATHANA RAGAWARNA": "passed",
+    "BANUA SANGGONI": "failed",
+    "TERBANG BALAESANG": "failed",
+    "TEMU BALAESANG": "home"
 });
 
 const form = document.getElementById("code-form");
@@ -16,12 +17,14 @@ const errorMessage = document.getElementById("error-message");
 if (form && codeInput && errorMessage) {
     const clearError = () => {
         errorMessage.textContent = "";
+        errorMessage.style.display = "none";
         codeInput.classList.remove("is-invalid");
         codeInput.removeAttribute("aria-invalid");
     };
 
     const showError = (message) => {
         errorMessage.textContent = message;
+        errorMessage.style.display = "block";
         codeInput.classList.add("is-invalid");
         codeInput.setAttribute("aria-invalid", "true");
         codeInput.focus();
@@ -33,7 +36,7 @@ if (form && codeInput && errorMessage) {
     form.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const rawValue = codeInput.value.trim();
+        const rawValue = codeInput.value.trim().toUpperCase();
 
         if (rawValue === "") {
             showError("Invalid Code. Please check your code and try again.");
@@ -50,6 +53,11 @@ if (form && codeInput && errorMessage) {
 
             if (status === "failed") {
                 window.location.href = "failed.html";
+                return;
+            }
+
+            if (status === "home") {
+                window.location.href = "https://temubalaesang.me";
                 return;
             }
         }
