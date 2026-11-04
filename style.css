@@ -531,7 +531,6 @@ body {
         letter-spacing: -0.01em;
     }
 
-    /* Invisible counterweight matching emblem width to keep header title 100% centered */
     .header-inner::after {
         content: "";
         width: 38px;
