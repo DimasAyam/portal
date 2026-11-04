@@ -316,6 +316,7 @@ body {
 }
 
 .result-card {
+    width: min(92vw, 460px);
     align-items: center;
     text-align: center;
     gap: 22px;
@@ -348,15 +349,20 @@ body {
 }
 
 .result-subtitle {
-    max-width: 320px;
+    max-width: 100%;
+    line-height: 1.55;
 }
 
 .stakeholder-notes {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     color: var(--text-secondary);
     font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 16px;
+    width: 100%;
 }
 
 .stakeholder-notes:empty {
