@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+    ========================================
+    FAILED RESULT PAGE
+    ========================================
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result - Not Passed</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="result-page">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link logo-start" href="https://temubalaesang.me" aria-label="Go to homepage">
+                <img src="logo-placeholder.png" alt="Portal Logo Emblem" class="site-logo site-logo--emblem"
+                    onerror="this.style.display='none'; document.querySelector('.logo-text').classList.add('logo-text--visible');" />
+                <span class="logo-text">[PORTAL LOGO]</span>
+            </a>
+            <h1 class="header-title">Seleksi Penerus Tim KKN Temu Balaesang 2027</h1>
+            <a class="logo-link logo-end" aria-label="Go to homepage">
+                <img src="logo-text.png" alt="Temu Balaesang" class="site-logo site-logo--text"
+                    onerror="this.style.display='none';" />
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="page-content">
+        <section class="card result-card" aria-labelledby="result-title">
+            <div class="result-icon icon-failed" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="22" stroke="#f87171" stroke-width="2.5" />
+                    <path d="M17 17L31 31M31 17L17 31" stroke="#f87171" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+
+            <header class="card-header">
+                <h2 id="result-title" class="title result-title">Not Passed</h2>
+                <p class="subtitle result-subtitle">
+                    You did not meet the required criteria this time.
+                </p>
+            </header>
+
+            <div class="stakeholder-notes">
+                <!--
+        <p>Example</p>
+        -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-contact">
+                <a href="mailto:kkntemubalaesang@gmail.com" class="footer-link">
+                    <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    kkntemubalaesang@gmail.com
+                </a>
+                <span class="footer-divider" aria-hidden="true">•</span>
+                <a href="https://www.instagram.com/temubalaesang?vrfl=MTdnbXNsaWZ4enFpaw==" target="_blank"
+                    rel="noopener noreferrer" class="footer-link">
+                    <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                    </svg>
+                    temubalaesang
+                </a>
+                <span class="footer-divider" aria-hidden="true">•</span>
+                <a href="https://www.tiktok.com/@temu.balaesang" target="_blank" rel="noopener noreferrer"
+                    class="footer-link">
+                    <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                    </svg> temu.balaesang
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <small>&copy; <span id="year"></span> KKN Temu Balaesang. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
