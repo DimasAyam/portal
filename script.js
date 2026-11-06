@@ -39,7 +39,7 @@ if (form && codeInput && errorMessage) {
         const rawValue = codeInput.value.trim().toUpperCase();
 
         if (rawValue === "") {
-            showError("Invalid Code. Please check your code and try again.");
+            showError("Invalid. Please try again.");
             return;
         }
 
@@ -62,7 +62,7 @@ if (form && codeInput && errorMessage) {
             }
         }
 
-        showError("Invalid Code. Please check your code and try again.");
+        showError("Invalid. Please try again.");
     });
 } else {
     console.warn(
