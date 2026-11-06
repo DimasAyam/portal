@@ -2,114 +2,183 @@
 <html lang="en">
 
 <head>
-  <!-- 
-    ========================================
-    HOME PAGE
-    ========================================
-  -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal Temu Balaesang</title>
+  <title>Portal Temu Balaesang - Maintenance</title>
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- STYLES & SCRIPTS -->
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <link rel="icon" type="image/png" href="logo-placeholder.png" />
+  <style>
+    /* ========================================
+      THEME STYLES (Preserving Your Brand)
+      ======================================== */
+    :root {
+      --bg: #001e32;
+      --card-bg: rgba(0, 24, 42, 0.75);
+      --text-primary: #f0f6fc;
+      --text-secondary: #94a3b8;
+      --border-card: rgba(255, 255, 255, 0.08);
+      --border-card-top: rgba(56, 189, 248, 0.25);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(1, 65, 107, 0.22);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      background-image: radial-gradient(circle at 50% 30%, rgba(1, 65, 107, 0.45) 0%, rgba(0, 30, 50, 0.7) 60%, var(--bg) 100%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* CENTERED MAIN CARD */
+    .maintenance-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-card);
+      border-top: 3px solid var(--border-card-top);
+      border-radius: var(--radius);
+      padding: 40px 30px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    /* LOGO & BRANDING */
+    .brand-wrapper {
+      margin-bottom: 24px;
+    }
+
+    .brand-logo {
+      height: 64px;
+      width: auto;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    }
+
+    .brand-text {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #38bdf8;
+      margin: 0;
+    }
+
+    /* CONTENT */
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 12px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin: 0 0 32px 0;
+    }
+
+    /* IN-CARD MINIMAL SOCIAL LINKS */
+    .minimal-contact {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 24px;
+    }
+
+    .contact-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-link:hover {
+      color: #38bdf8;
+      transform: translateY(-1px);
+    }
+
+    .contact-icon {
+      width: 20px;
+      height: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <header class="site-header">
-    <!-- HEADER -->
-    <div class="header-inner">
+
+  <main class="maintenance-card">
+    <!-- Branding Header inside the Card -->
+    <div class="brand-wrapper">
       <a class="logo-link logo-start" href="https://temubalaesang.me" aria-label="Go to homepage">
-        <img src="logo-placeholder.png" alt="Portal Logo Emblem" class="site-logo site-logo--emblem"
-          onerror="this.style.display='none'; document.querySelector('.logo-text').classList.add('logo-text--visible');" />
-        <span class="logo-text">[PORTAL LOGO]</span>
+        <img src="logo-placeholder.png" alt="Temu Balaesang Emblem" class="brand-logo"
+          onerror="this.style.display='none'; document.getElementById('alt-brand-text').style.display='block';">
+      </a>
+      <p id="alt-brand-text" class="brand-text" style="display:none;">Temu Balaesang</p>
+    </div>
+
+    <!-- Maintenance Status -->
+    <h1 class="title">Portal Ditutup Sementara</h1>
+    <p class="subtitle">
+      Proses seleksi penerus tim KKN Temu Balaesang 2027 sedang berjalan. Portal pengecekan status akan dibuka kembali
+      di waktu mendatang.
+    </p>
+
+    <!-- Social Connections Remaining Functional inside Card -->
+    <div class="minimal-contact">
+      <a href="https://www.instagram.com/temubalaesang" target="_blank" rel="noopener noreferrer" class="contact-link"
+        aria-label="Instagram">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+        </svg>
       </a>
 
-      <h1 class="header-title">Seleksi Penerus Tim KKN Temu Balaesang 2027</h1>
+      <a href="mailto:kkntemubalaesang@gmail.com" class="contact-link" aria-label="Email">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+      </a>
 
-      <a class="logo-link logo-end" href="index.html" aria-label="Go to homepage">
-        <img src="logo-text.png" alt="Temu Balaesang" class="site-logo site-logo--text"
-          onerror="this.style.display='none';" />
+      <a href="https://www.tiktok.com/@temu.balaesang" target="_blank" rel="noopener noreferrer" class="contact-link"
+        aria-label="TikTok">
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+        </svg>
       </a>
     </div>
-  </header>
-
-  <!-- MAIN -->
-  <main class="page-content">
-    <section class="card" aria-labelledby="portal-title">
-      <header class="card-header">
-        <h2 id="portal-title" class="title">Portal Temu Balaesang</h2>
-        <p class="subtitle">
-          Enter your group name to check.
-        </p>
-      </header>
-      <form id="code-form" class="code-form" novalidate>
-        <div class="form-group">
-          <label for="group-code" class="input-label">Group Name</label>
-          <input id="group-code" class="code-input" name="groupCode" type="text" autocomplete="off" spellcheck="false"
-            maxlength="25" placeholder="ex: TEMU BALAESANG" aria-describedby="code-hint error-message" />
-          <p id="error-message" class="error-message" style="color: red; margin-top: 5px; display: none;"></p>
-        </div>
-        <!-- SUBMIT BUTTON -->
-        <button type="submit" class="submit-button">Check Status</button>
-      </form>
-
-      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
-    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-contact">
-        <a href="https://www.instagram.com/temubalaesang?vrfl=MTdnbXNsaWZ4enFpaw==" target="_blank"
-          rel="noopener noreferrer" class="footer-link">
-          <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-          </svg>
-          temubalaesang
-        </a>
-
-        <span class="footer-divider" aria-hidden="true">•</span>
-
-        <a href="mailto:kkntemubalaesang@gmail.com" class="footer-link">
-          <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
-          kkntemubalaesang@gmail.com
-        </a>
-
-        <span class="footer-divider" aria-hidden="true">•</span>
-
-        <a href="https://www.tiktok.com/@temu.balaesang" target="_blank" rel="noopener noreferrer" class="footer-link">
-          <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-          </svg> temu.balaesang
-        </a>
-
-      </div>
-      <div class="footer-bottom">
-        <small>&copy; <span id="year"></span> KKN-PPM UGM Temu Balaesang. All rights reserved.</small>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 
 </html>
